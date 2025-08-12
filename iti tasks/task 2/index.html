@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registration</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Registration Form</h1>
+    <br>
+    <br>
+
+    <form method="get" action="html/wellcome.html" enctype="multipart/form-data" autocomplete="on">
+      <!-- Hidden User ID -->
+      <input type="hidden" name="userId" value="12345" />
+
+      <!-- First name -->
+      <div>
+        <label for="firstName">First Name *</label>
+        <input id="firstName" name="firstName" type="text" required minlength="2" placeholder="Enter first name" tabindex="1" accesskey="f" />
+      </div>
+
+      <!-- Last name -->
+      <div>
+        <label for="lastName">Last Name *</label>
+        <input id="lastName" name="lastName" type="text" required minlength="2" placeholder="Enter last name" tabindex="2" accesskey="l" />
+      </div>
+
+      <!-- Email -->
+      <div>
+        <label for="email">Email *</label>
+        <input id="email" name="email" type="email" required placeholder="you@example.com" tabindex="3" accesskey="e" />
+      </div>
+
+      <!-- Birthdate -->
+      <div>
+        <label for="birth">Birth Date</label>
+        <input id="birth" name="birthDate" type="date" tabindex="4" accesskey="b" />
+      </div>
+
+      <!-- Password -->
+      <div>
+        <label for="pw">Password *</label>
+        <input id="pw" name="password" type="password" required minlength="6" pattern="(?=.*\d).{6,}" title="At least 6 characters and 1 number" tabindex="5" accesskey="p" />
+      </div>
+
+      <!-- Repeat password -->
+      <div>
+        <label for="pw2">Repeat Password *</label>
+        <input id="pw2" name="password2" type="password" required minlength="6" tabindex="6" accesskey="c" />
+      </div>
+
+      <!-- User picture -->
+      <div>
+        <label for="pic">User Picture</label>
+        <input id="pic" name="userPicture" type="file" accept="image/*" tabindex="7" accesskey="u" />
+      </div>
+
+      <!-- Gender (radio) -->
+      <div>
+        <fieldset>
+          <legend>Gender</legend>
+          <label><input type="radio" name="gender" value="male" tabindex="8" accesskey="m" /> Male</label><br/>
+          <label><input type="radio" name="gender" value="female" tabindex="9" accesskey="g" /> Female</label>
+        </fieldset>
+      </div>
+
+      <!-- Faculty (dropdown) -->
+      <div>
+        <label for="faculty">Faculty</label>
+        <select id="faculty" name="faculty" tabindex="10" accesskey="k">
+          <option value="">-- Select Faculty --</option>
+          <option>Computer Science</option>
+          <option>Engineering</option>
+          <option>Economics</option>
+          <option>Medicine</option>
+        </select>
+      </div>
+
+      <!-- Interests -->
+      <div class="full">
+        <fieldset>
+          <legend>Interests</legend>
+          <label><input type="checkbox" name="interests" value="programming" tabindex="11" /> Programming</label>
+          <label><input type="checkbox" name="interests" value="reading" tabindex="12" /> Reading</label>
+          <label><input type="checkbox" name="interests" value="swimming" tabindex="13" /> Swimming</label>
+          <label><input type="checkbox" name="interests" value="music" tabindex="14" /> Music</label>
+        </fieldset>
+      </div>
+
+      <!-- About you -->
+      <div class="full">
+        <label for="about">About You</label>
+        <textarea id="about" name="about" placeholder="Write a short bio..." tabindex="15"></textarea>
+      </div>
+
+      <!-- Terms -->
+      <div class="full terms">
+        <input id="agree" name="agree" type="checkbox" required tabindex="16" accesskey="t" />
+        <label for="agree">I agree to the <a href="terms.html" target="_blank" rel="noopener">terms and conditions</a></label>
+      </div>
+
+      <!-- Buttons -->
+      <div class="full actions">
+        <button type="submit" tabindex="17" accesskey="s">Submit</button>
+        <button type="reset" tabindex="18" accesskey="r">Reset</button>
+      </div>
+
+    </form>
+  </div>
+</body>
+</html>

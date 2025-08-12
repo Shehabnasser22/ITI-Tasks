@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Registration</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<div class="container" style="max-width:720px">
+  <h1>Registration</h1>
+  <div class="form-card">
+    <!-- method GET و action لصفحة thankyou.html -->
+    <form action="wellcome.html" method="get" novalidate>
+      <!-- hidden user id -->
+      <input type="hidden" name="userId" value="12345">
+
+      <div class="form-row">
+        <div class="col">
+          <label for="first">First Name</label>
+          <input id="first" name="firstName" type="text" required tabindex="1" placeholder="First name">
+        </div>
+        <div class="col">
+          <label for="last">Last Name</label>
+          <input id="last" name="lastName" type="text" required tabindex="2" placeholder="Last name">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required tabindex="3" placeholder="you@example.com">
+        </div>
+        <div class="col">
+          <label for="birth">Birth Date</label>
+          <input id="birth" name="birthDate" type="date" tabindex="6">
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="col">
+          <label for="pass">Password</label>
+          <input id="pass" name="password" type="password" minlength="6" required tabindex="4" placeholder="min 6 chars">
+        </div>
+        <div class="col">
+          <label for="repass">Repeat Password</label>
+          <input id="repass" name="repeatPassword" type="password" minlength="6" required tabindex="5" placeholder="repeat password">
+        </div>
+      </div>
+
+      <div style="margin-bottom:12px">
+        <label for="pic">User Picture</label>
+        <input id="pic" name="userPic" type="file" accept="image/*" tabindex="7">
+      </div>
+
+      <fieldset>
+        <legend>Gender</legend>
+        <label><input type="radio" name="gender" value="male" required tabindex="8"> Male</label>
+        <label style="margin-left:12px"><input type="radio" name="gender" value="female" required tabindex="9"> Female</label>
+      </fieldset>
+
+      <div style="margin-bottom:12px">
+        <label for="faculty">Faculty</label>
+        <select id="faculty" name="faculty" required tabindex="10">
+          <option value="">-- choose faculty --</option>
+          <option value="engineering">Engineering</option>
+          <option value="commerce">Commerce</option>
+          <option value="it">Information Technology</option>
+        </select>
+      </div>
+
+      <fieldset>
+        <legend>Interests</legend>
+        <label><input type="checkbox" name="interest" value="programming" tabindex="11"> Programming</label><br>
+        <label><input type="checkbox" name="interest" value="reading" tabindex="12"> Reading</label><br>
+        <label><input type="checkbox" name="interest" value="swimming" tabindex="13"> Swimming</label>
+      </fieldset>
+
+      <div style="margin-bottom:12px">
+        <label for="about">About you</label>
+        <textarea id="about" name="about" placeholder="Tell us about yourself..." tabindex="14"></textarea>
+      </div>
+
+      <div style="margin-bottom:12px">
+        <label>
+          <input type="checkbox" name="agree" required tabindex="15">
+          I agreed to <a href="terms.html" target="_blank">terms and condition</a>
+        </label>
+      </div>
+
+      <div class="controls">
+        <button type="submit" class="submit" tabindex="16">Submit</button>
+        <button type="reset" class="reset" tabindex="17">Reset</button>
+      </div>
+
+      <p style="margin-top:10px;color:var(--muted);font-size:13px">
+        Note: form uses <strong>GET</strong> method so values will appear in URL after submit. Required fields are enforced by browser.
+      </p>
+    </form>
+  </div>
+</div>
+</body>
+</html>

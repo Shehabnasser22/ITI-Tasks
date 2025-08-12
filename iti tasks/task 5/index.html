@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bootstrap Grid Layout</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<style>
+  .box {
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    border: 1px solid #ddd;
+  }
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+</style>
+</head>
+<body class="d-flex flex-column min-vh-100">
+
+  <header class="box flex-shrink-0">Header</header>
+  <nav class="box flex-shrink-0">Menu Navigation</nav>
+
+  <div class="container-fluid flex-grow-1">
+    <div class="row h-100">
+      <aside class="col-md-3 box">cuntenutu</aside>
+      <main class="col-md-6 box">cuntenutu Main</main>
+      <aside class="col-md-3 box">cuntenutu</aside>
+    </div>
+  </div>
+
+  <footer class="box flex-shrink-0">Footer</footer>
+
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
